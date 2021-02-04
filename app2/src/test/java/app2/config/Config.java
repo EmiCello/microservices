@@ -2,6 +2,7 @@ package app2.config;
 
 import org.springframework.boot.test.context.TestConfiguration;
 import org.springframework.context.annotation.Bean;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 
 import java.util.Properties;
@@ -14,8 +15,8 @@ public class Config {
         JavaMailSenderImpl emailSender = new JavaMailSenderImpl();
         emailSender.setHost("smtp.mailtrap.io");
         emailSender.setPort(2525);
-        emailSender.setUsername("d85dffc94125ad");
-        emailSender.setPassword("e34bd2b392a5ae");
+        emailSender.setUsername("2e0ca958ae7a73");
+        emailSender.setPassword("cd23c280218268");
         Properties mailProps = new Properties();
         mailProps.setProperty("mail.transport.protocol","smtp");
         mailProps.setProperty("mail.smtp.auth","true");

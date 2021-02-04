@@ -13,7 +13,7 @@
 
 
     <modules>
-        <module>app1</module>
+        <module>user-service</module>
         <module>app2</module>
         <module>gateway</module>
         <module>SpringCloudEurekaServer</module>

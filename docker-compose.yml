@@ -19,13 +19,13 @@ services:
         container_name: microservices-gateway
         restart: always
 
-    app1:
+    user-service:
         build:
             context: .
-            dockerfile: app1/Dockerfile
+            dockerfile: user-service/Dockerfile
         ports:
             - 4000:4000
-        container_name: microservices-app1
+        container_name: microservices-user-service
         restart: always
         links:
             - mongo

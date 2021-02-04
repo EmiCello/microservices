@@ -3,6 +3,7 @@ package app2.service;
 import app2.domains.EmailInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
+import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.JavaMailSenderImpl;
 import org.springframework.stereotype.Service;
 
@@ -10,7 +11,7 @@ import org.springframework.stereotype.Service;
 public class EmailService {
 
     @Autowired
-    private JavaMailSenderImpl mailSender;
+    private JavaMailSender mailSender;
 
     public void sendEmail(EmailInfo emailInfo) {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();

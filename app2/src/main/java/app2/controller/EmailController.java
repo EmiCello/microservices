@@ -5,6 +5,7 @@ import app2.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +19,7 @@ public class EmailController {
     EmailService emailService;
 
     @PostMapping(value = "/feedback")
-    public void sendFeedback(EmailInfo emailInfo, BindingResult bindingResult) {
+    public void sendFeedback(@RequestBody EmailInfo emailInfo, BindingResult bindingResult) {
         if (bindingResult.hasErrors()) {
             throw new ValidationException("Feedback is not valid.");
         }
