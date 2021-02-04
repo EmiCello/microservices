@@ -1,0 +1,54 @@
+version: "3.7"
+services:
+    springcloudeurekaserver:
+        build:
+            context: .
+            dockerfile: SpringCloudEurekaServer/Dockerfile
+        ports:
+            - 8761:8761
+        container_name: microservices-eureka
+        restart: always
+
+
+    gateway:
+        build:
+            context: .
+            dockerfile: gateway/Dockerfile
+        ports:
+            - 3000:3000
+        container_name: microservices-gateway
+        restart: always
+
+    app1:
+        build:
+            context: .
+            dockerfile: app1/Dockerfile
+        ports:
+            - 4000:4000
+        container_name: microservices-app1
+        restart: always
+        links:
+            - mongo
+        depends_on:
+            - mongo
+        environment:
+            - MONGODB_URI=mongodb://mongo:27017
+            - DB_NAME=local
+
+
+    app2:
+        build:
+            context: .
+            dockerfile: app2/Dockerfile
+        ports:
+            - 5000:5000
+        container_name: microservice-app2
+        restart: always
+
+
+    mongo:
+        image: 'mongo:latest'
+        ports:
+            - 27017:27017
+        container_name: microservices-mongo
+        restart: always
