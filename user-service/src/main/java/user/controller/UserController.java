@@ -1,5 +1,7 @@
 package user.controller;
 
+import com.netflix.appinfo.InstanceInfo;
+import com.netflix.discovery.shared.Application;
 import user.HttpException;
 import user.domains.UpdateUserRequest;
 import user.domains.User;
@@ -47,7 +49,7 @@ public class UserController {
                 .httpStatus(500)
                 .build();
         }
-//        logger.info("User created successful");
+        logger.info("User created successful");
 //        Application application = eurekaClient.getApplication("notification-service");
 //        InstanceInfo instanceInfo = application.getInstances().get(0);
 //        String url = "http://" +instanceInfo.getIPAddr() + ":" + instanceInfo.getPort() + "/mail/feedback";
