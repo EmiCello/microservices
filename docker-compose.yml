@@ -8,7 +8,16 @@ services:
             - 8761:8761
         container_name: microservices-eureka
         restart: always
-
+        links:
+             - mongo
+             - gateway
+             - user-service
+             - app2
+        depends_on:
+            - mongo
+            - gateway
+            - user-service
+            - app2
 
     gateway:
         build:

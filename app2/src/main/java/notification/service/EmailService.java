@@ -1,6 +1,6 @@
-package app2.service;
+package notification.service;
 
-import app2.domains.EmailInfo;
+import notification.domains.EmailInfo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.mail.SimpleMailMessage;
 import org.springframework.mail.javamail.JavaMailSender;
@@ -17,8 +17,8 @@ public class EmailService {
         JavaMailSenderImpl mailSender = new JavaMailSenderImpl();
         mailSender.setHost("smtp.mailtrap.io");
         mailSender.setPort(2525);
-        mailSender.setUsername("8472a372031c68");
-        mailSender.setPassword("944ab9d3d61f0d");
+        mailSender.setUsername("2e0ca958ae7a73");
+        mailSender.setPassword("cd23c280218268");
 
         SimpleMailMessage mailMessage = new SimpleMailMessage();
         mailMessage.setFrom("test@test.com");

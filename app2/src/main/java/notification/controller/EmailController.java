@@ -1,7 +1,7 @@
-package app2.controller;
+package notification.controller;
 
-import app2.domains.EmailInfo;
-import app2.service.EmailService;
+import notification.domains.EmailInfo;
+import notification.service.EmailService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.PostMapping;

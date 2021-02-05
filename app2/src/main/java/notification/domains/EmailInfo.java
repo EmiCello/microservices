@@ -1,4 +1,4 @@
-package app2.domains;
+package notification.domains;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

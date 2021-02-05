@@ -51,7 +51,6 @@ public class UserController {
 //        Application application = eurekaClient.getApplication("notification-service");
 //        InstanceInfo instanceInfo = application.getInstances().get(0);
 //        String url = "http://" +instanceInfo.getIPAddr() + ":" + instanceInfo.getPort() + "/mail/feedback";
-//        User object = restTemplate.getForObject(url, User.class);
         return result;
     }
 

@@ -11,9 +11,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.coder</groupId>
-    <artifactId>app2</artifactId>
+    <artifactId>notification-service</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>app2</name>
+    <name>notification-service</name>
     <description>Demo project for Spring Boot</description>
     <properties>
         <java.version>11</java.version>
